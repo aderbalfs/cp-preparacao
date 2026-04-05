@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router";
 import { Users, MessageCircle, ArrowRight, Trophy, BookOpen } from "lucide-react";
 
+const B = import.meta.env.BASE_URL;
+
 const nextSteps = [
   {
     icon: MessageCircle,
@@ -31,7 +33,7 @@ export function ThankYouPage() {
 
       {/* Navbar */}
       <div className="px-6 py-4 border-b" style={{ borderColor: "rgba(255,255,255,0.07)" }}>
-        <img src="/marca.PNG" alt="CP Preparação" className="h-8 w-auto" />
+        <img src={`${B}marca.PNG`} alt="CP Preparação" className="h-8 w-auto" />
       </div>
 
       <div className="max-w-2xl mx-auto px-6 py-16">
@@ -95,7 +97,7 @@ export function ThankYouPage() {
 
         {/* Instructor */}
         <div className="flex items-center gap-5 p-5 mb-10" style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
-          <img src="/marcos.png" alt="Prof. Marcos" className="w-20 h-24 object-cover object-top flex-shrink-0" style={{ borderLeft: "3px solid #CE1C1C" }} />
+          <img src={`${B}marcos.png`} alt="Prof. Marcos" className="w-20 h-24 object-cover object-top flex-shrink-0" style={{ borderLeft: "3px solid #CE1C1C" }} />
           <div>
             <p className="text-[#CE1C1C] text-xs uppercase tracking-widest mb-1" style={{ fontFamily: "'Saira Condensed', sans-serif", fontWeight: 700 }}>
               Mensagem do Fundador

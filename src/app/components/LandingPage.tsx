@@ -12,21 +12,23 @@ import {
   Flame,
 } from "lucide-react";
 
+const B = import.meta.env.BASE_URL;
+
 const professorImages = [
-  "/professor1.jpeg",
-  "/professor2.jpeg",
-  "/professor3.jpeg",
+  `${B}professor1.jpeg`,
+  `${B}professor2.jpeg`,
+  `${B}professor3.jpeg`,
 ];
 
 // ─── Slider de Aprovados ────────────────────────────────────────────────────
 const approvedSlides = [
-  { img: "/DanielJunior.jpeg",      name: "Daniel Junior",      cargo: "31º colocado geral * Policia Militar – PE" },
-  { img: "/ArlonDavid.jpeg",        name: "Arllon David",       cargo: "Polícia Militar – RN"  },
-  { img: "/AngelicaRose.jpeg",      name: "Angelica Rose",      cargo: "Policia Militar – PB" },
-  { img: "/IgorCorreia.png",        name: "Igor Correia",       cargo: "Policia Militar – PE" },
-  { img: "/JoaoLucas.jpeg",         name: "João Lucas",         cargo: "Policia Militar – PE" },
-  { img: "/ShaydLucas.png",         name: "Shayd Lucas",        cargo: "Policia Militar – PB" },
-  { img: "/JeffersonCoelho.jpeg",   name: "Jefferson Coelho",   cargo: "Policia Militar - PB" },
+  { img: `${B}DanielJunior.jpeg`,    name: "Daniel Junior",    cargo: "31º colocado geral * Policia Militar – PE" },
+  { img: `${B}ArlonDavid.jpeg`,      name: "Arllon David",     cargo: "Polícia Militar – RN"  },
+  { img: `${B}AngelicaRose.jpeg`,    name: "Angelica Rose",    cargo: "Policia Militar – PB" },
+  { img: `${B}IgorCorreia.png`,      name: "Igor Correia",     cargo: "Policia Militar – PE" },
+  { img: `${B}JoaoLucas.jpeg`,       name: "João Lucas",       cargo: "Policia Militar – PE" },
+  { img: `${B}ShaydLucas.png`,       name: "Shayd Lucas",      cargo: "Policia Militar – PB" },
+  { img: `${B}JeffersonCoelho.jpeg`, name: "Jefferson Coelho", cargo: "Policia Militar - PB" },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -41,12 +43,12 @@ const stats = [
 
 // ─── Professores ─────────────────────────────────────────────────────────────
 const professors = [
-  { img: "/prof-adalis.png",    name: "Prof. Adalis",                             disciplina: "Legislação Penal Extravagante" },
-  { img: "/prof-agricio.png",   name: "Prof. Agrício Neto",                       disciplina: "Informática" },
-  { img: "/prof-bilunga.jpeg",  name: "Prof. Severino Lourenço",                  disciplina: "Raciocínio Lógico" },
-  { img: "/prof-marquinho.png", name: "Prof. e Proprietário Marquinho Germano",   disciplina: "Direito Constitucional" },
-  { img: "/prof-ramon.jpeg",    name: "Prof. Ramon",                              disciplina: "Língua Portuguesa" },
-  { img: "/Prof-Neto.png",      name: "Prof. Neto",                               disciplina: "Direito Administrativo e Penal" },
+  { img: `${B}prof-adalis.png`,    name: "Prof. Adalis",                             disciplina: "Legislação Penal Extravagante" },
+  { img: `${B}prof-agricio.png`,   name: "Prof. Agrício Neto",                       disciplina: "Informática" },
+  { img: `${B}prof-bilunga.jpeg`,  name: "Prof. Severino Lourenço",                  disciplina: "Raciocínio Lógico" },
+  { img: `${B}prof-marquinho.png`, name: "Prof. e Proprietário Marquinho Germano",   disciplina: "Direito Constitucional" },
+  { img: `${B}prof-ramon.jpeg`,    name: "Prof. Ramon",                              disciplina: "Língua Portuguesa" },
+  { img: `${B}Prof-Neto.png`,      name: "Prof. Neto",                               disciplina: "Direito Administrativo e Penal" },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 const infiniteProfs = [...professors, ...professors];
@@ -166,7 +168,7 @@ export function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between" style={{ height: "64px" }}>
           {/* Logo */}
           <a href="#">
-            <img src="/marca.PNG" alt="CP Preparação" className="h-9 w-auto" />
+            <img src={`${B}marca.PNG`} alt="CP Preparação" className="h-9 w-auto" />
           </a>
 
           {/* Nav links – desktop */}
@@ -321,7 +323,7 @@ export function LandingPage() {
 
               <div className="relative overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
                 <img
-                  src="/design.png"
+                  src={`${B}design.png`}
                   alt="Professor Marcos Germano"
                   className="w-full object-cover object-top"
                   style={{ height: "520px", display: "block", filter: "brightness(0.92)" }}
@@ -343,7 +345,7 @@ export function LandingPage() {
                         Proprietário CP Preparação
                       </p>
                     </div>
-                    <img src="/logo.jpeg" alt="CP" className="w-12 h-12 object-cover" style={{ border: "2px solid #CE1C1C" }} />
+                    <img src={`${B}logo.jpeg`} alt="CP" className="w-12 h-12 object-cover" style={{ border: "2px solid #CE1C1C" }} />
                   </div>
                 </div>
               </div>
@@ -756,7 +758,7 @@ export function LandingPage() {
       <footer style={{ background: "#000", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
         <div className="w-full h-[3px] bg-[#CE1C1C]" />
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src="/marca.PNG" alt="CP Preparação" className="h-8 w-auto brightness-90" />
+          <img src={`${B}marca.PNG`} alt="CP Preparação" className="h-8 w-auto brightness-90" />
           <p className="text-white/20 text-xs text-center" style={{ fontFamily: "'Saira', sans-serif" }}>
             © 2025 CP Preparação. Todos os direitos reservados.
           </p>
